@@ -83,7 +83,7 @@ app.post('/api/candidate', ({ body }, res) => {
   if (errors) {
     res.status(400).json({ error: errors });
     return;
-  } else {
+  } 
   const sql = `INSERT INTO candidates (first_name, last_name, industry_connected)
                VALUES (?,?,?)`;
   const params = [body.first_name, body.last_name, body.industry_connected];
@@ -98,7 +98,7 @@ app.post('/api/candidate', ({ body }, res) => {
       data: body
     });
   });
- } 
+ 
 });
 
 // const sql = `INSERT INTO candidates (id, first_name, last_name, industry_connected)
